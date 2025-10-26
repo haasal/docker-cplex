@@ -1,7 +1,7 @@
 # Dockerized CPLEX Setup
 
 > [!Important]
-> This is a fork by [Alexander Haas](https://github.com/haasal).
+> This is a fork by [Alexander Haas](https://github.com/haasal) of the original project by [Victor San Kho Lin](https://github.com/victorskl/docker-cplex).
 > This fork makes some changes to the Docker image and adds python support.
 
 # Building the Docker Image
@@ -33,8 +33,8 @@ docker run --rm -it cplex-demo /bin/bash
 Now compile the `HelloCplex.java` and run it:
 
 > [!Note]
-> You have to adjust the last part of the `java.library.path` to your architecture.
-> I.e. Probably `x86-64_linux`.
+> You have probably to adjust the last part of the `java.library.path` to your architecture.
+> I.e. Probably `x86-64_linux` instead of `arm64_linux`.
 
 ```bash
 javac -cp javac -cp .:/opt/ibm/ILOG/CPLEX_Studio_Community2212/cplex/lib/cplex.jar HelloCplex.java
