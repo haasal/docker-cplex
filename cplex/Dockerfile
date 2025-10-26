@@ -1,8 +1,11 @@
 FROM eclipse-temurin:21
 
-COPY cplex_studio128.linux-x86-64.bin /cplex/cplex_studio128.linux-x86-64.bin
-COPY response.properties /cplex/response.properties
+ARG CPLEX_INSTALLER
+RUN if [ -z "$CPLEX_INSTALLER" ]; then echo "Error: CPLEX_INSTALLER build argument not set" >&2; exit 1; fi
 
-RUN chmod u+x /cplex/cplex_studio128.linux-x86-64.bin
-RUN /cplex/cplex_studio128.linux-x86-64.bin -f /cplex/response.properties
+COPY ${CPLEX_INSTALLER} /cplex/${CPLEX_INSTALLER}
+COPY installer.properties /cplex/installer.properties
+
+RUN chmod u+x /cplex/${CPLEX_INSTALLER}
+RUN /cplex/${CPLEX_INSTALLER} -f /cplex/installer.properties
 RUN rm -rf /cplex
