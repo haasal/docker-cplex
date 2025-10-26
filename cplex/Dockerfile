@@ -1,4 +1,4 @@
-FROM openjdk:8-jre
+FROM eclipse-temurin:21
 
 COPY cplex_studio128.linux-x86-64.bin /cplex/cplex_studio128.linux-x86-64.bin
 COPY response.properties /cplex/response.properties
