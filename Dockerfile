@@ -4,4 +4,4 @@ COPY src/ /app/
 
 WORKDIR /app
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["python3", "HelloPython.py"]

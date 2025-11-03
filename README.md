@@ -18,7 +18,7 @@ The docker image should now be available under `cplex`.
 
 # Running java code
 
-Create the actual running image using the previously built `cplex` image:1
+Create the actual running image using the previously built `cplex` image
 
 ```bash
 docker build -t cplex-demo .
@@ -27,18 +27,5 @@ docker build -t cplex-demo .
 Run and shell into the container (for demo purposes)
 
 ```bash
-docker run --rm -it cplex-demo /bin/bash
-```
-
-Now compile the `HelloCplex.java` and run it:
-
-> [!Note]
-> You have probably to adjust the last part of the `java.library.path` to your architecture and the path to the CPLEX installation.
-> I.e. Probably `x86-64_linux` instead of `arm64_linux`.
-
-```bash
-javac -cp javac -cp .:/opt/ibm/ILOG/CPLEX_Studio_Community2212/cplex/lib/cplex.jar HelloCplex.java
-java -Djava.library.path=/opt/ibm/ILOG/CPLEX_Studio_Community2212/cplex/bin/arm64_linux/\
-     -cp .:/opt/ibm/ILOG/CPLEX_Studio_Community2212/cplex/lib/cplex.jar\
-     HelloCplex
+docker run --rm -it cplex-demo
 ```
