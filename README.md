@@ -33,7 +33,7 @@ docker run --rm -it cplex-demo /bin/bash
 Now compile the `HelloCplex.java` and run it:
 
 > [!Note]
-> You have probably to adjust the last part of the `java.library.path` to your architecture.
+> You have probably to adjust the last part of the `java.library.path` to your architecture and the path to the CPLEX installation.
 > I.e. Probably `x86-64_linux` instead of `arm64_linux`.
 
 ```bash
