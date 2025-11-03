@@ -1,10 +1,9 @@
 # Dockerized CPLEX Setup
 
-> [!Important]
-> This is a fork by [Alexander Haas](https://github.com/haasal) of the original project by [Victor San Kho Lin](https://github.com/victorskl/docker-cplex).
-> This fork makes some changes to the Docker image and adds python support.
-
 # Building the Docker Image
+
+Copy your installer into the `cplex` directory.
+Then build the docker image with the following command, replacing the installer name to your specific installer file:
 
 ```bash
 cd cplex
@@ -14,7 +13,7 @@ docker build\
   .
 ```
 
-The docker image should now be available under `cplex`.
+The docker image should now be available locally under `cplex`.
 
 # Running java code
 
