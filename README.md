@@ -1,6 +1,10 @@
 # Dockerized CPLEX Setup
 
-# Building the Docker Image
+This is a Docker setup for IBM CPLEX on an ARM64 architecture. It includes instructions for building the Docker image and running a demo python application that utilizes CPLEX.
+
+Although this is a fork, the code is heavily modified from the original repository.
+
+## Building the Docker Image
 
 Copy your installer into the `cplex` directory.
 Then build the docker image with the following command, replacing the installer name to your specific installer file:
@@ -15,7 +19,7 @@ docker build\
 
 The docker image should now be available locally under `cplex`.
 
-# Running java code
+## Running java code
 
 Create the actual running image using the previously built `cplex` image
 
