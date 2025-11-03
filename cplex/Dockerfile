@@ -26,3 +26,5 @@ RUN ./configure --enable-optimizations && \
   make install
 WORKDIR /
 RUN rm -rf /cpython
+
+RUN python3 /opt/ibm/ILOG/CPLEX_Studio2211/python/setup.py install
