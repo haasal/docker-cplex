@@ -19,7 +19,7 @@ docker build\
 
 The docker image should now be available locally under `cplex`.
 
-## Running java code
+## Running python code
 
 Create the actual running image using the previously built `cplex` image
 
