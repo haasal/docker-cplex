@@ -24,7 +24,7 @@ Create the actual running image using the previously built `cplex` image
 docker build -t cplex-demo .
 ```
 
-Run and shell into the container (for demo purposes)
+Run the demo container with the python script in the `src` directory
 
 ```bash
 docker run --rm -it cplex-demo
